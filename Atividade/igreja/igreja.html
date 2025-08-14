@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href=".png" type="image/x-icon">
+    <title>Capela Santo Antonio</title>
+</head>
+<body>
+    <nav>
+        <h1>Capela Santo Antonio</h1>
+        <a href="#sobre">Sobre</a>
+        <a href="#programacao">Programação</a>
+        <a href="#comentario">Comentários</a>
+        <a href="#matricula">Matrículas</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div id="sobre" class="sobre">
+        <h2>Sobre a Capela</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, facere praesentium corporis, temporibus autem dignissimos neque illo dolor illum consectetur nam possimus atque voluptates deleniti fugiat soluta asperiores. Suscipit, velit.</p>
+        <img src="" alt="img da capela">
+    </div>
+
+    <div id="programacao" class="programacao">
+        <h2>Programação das Missas</h2>
+        <ul>Ex: Segunda - Sexta: 10:00 e 18:00</ul>
+        <ul>Ex: Sábado e Domingos: 9:00 e 18:00</ul>
+        <img src="" alt="img da missa">
+    </div>
+
+    <div id="comentario" class="comentario">
+        <h2>Comentários</h2>
+        <div class="form-group">    
+            <label for="nome-comentario">Nome:</label>
+            <input type="text" id="nome-comentario" placeholder="Digite seu nome:">
+        </div>
+        <div class="form-group">
+            <label for="mensagem-comentario">Comentário ou Sugestão:</label>
+            <input type="text" id="mensagem-comentario" placeholder="Digite sua mensagem:">
+        </div>
+    </div>
+
+    <div id="matricula" class="matricula">
+        <h2>Matrículas para Eventos</h2>
+        <div class="form-group">
+            <label for="evento">Selecionar evento:</label>
+            <select id="evento">
+                <option value="evento1">Evento 1</option>
+                <option value="evento2">Evento 2</option>
+                <option value="evento3">Evento 3</option>
+            </select><br>
+            <label for="nome_completo">Nome Completo:</label>
+            <input type="text" id="nome_completo" placeholder="Digite seu nome:"><br>
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" placeholder="Digite seu telefone:"><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu email:"><br>
+            <button onclick="inscrever">Inscrever-se</button>
+        </div>
+    </div>
+
+    <div id="contato" class="contato">
+        <h2>Contato</h2>
+        <li>Telefone: [telefone]</li>
+        <li>Email: [emal]</li>
+        <li>Endereço: [endereço]</li>
+    </div>
+</body>
+</html>
