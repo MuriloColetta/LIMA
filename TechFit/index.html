@@ -25,27 +25,31 @@
                 <a href="#horarios" class="nav-link">Horários</a>
                 </li>
                 <li class="nav-item">
-                <a href="#faq" class="nav-link">Perguntas Frequentes</a>
+                <a href="#faq" class="nav-link">avaliação física</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <div class="inicial">
-        <div class="inicial-content">
-            <div class="inicial-texto">
-                <h1>Sua melhor <br>versão <br>começa <br>aqui!</h1>
-            </div>
-            <img src="celular.png" class="inicial-img">
-        </div>
+        <h1>SUA MELHOR <br>VERSÃO <br>COMEÇA <br>AQUI!</h1>
     </div>
 
-
-
+    <div class="container">
+        <div class="sobre-texto">
+            <div class="bandeira">
+                <h1>Sobre a TechFit</h1>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto autem deleniti delectus. Illum quam eligendi possimus eveniet dolorum, quae nesciunt est fuga sit similique inventore perspiciatis fugit, cupiditate saepe cum.</p>
+        </div>
+        <div class="sobre-img">
+            <img src="sobre.webp" alt="Academia" class="imagem-fundo">
+        </div>
+    </div>
     
     <div class="agendamento-aulas">
-    <h2>Aulas Coletivas</h2>
-    <p>Participe de nossas aulas coletivas e melhore sua saúde com atividades divertidas e motivadoras.</p>
+        <h2>Aulas Coletivas</h2>
+        <p>Participe de nossas aulas coletivas e melhore sua saúde com atividades divertidas e motivadoras.</p>
         <div class="galeria">
             <div class="card">
                 <img src="capoeira.jpg" alt="Capoeira">
@@ -73,61 +77,77 @@
                 <p>Arte marcial tailandesa conhecida como a “luta das oito armas”, excelente para condicionamento.</p>
             </div>
         </div>
+
+        <div class="tabela-horarios">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Modalidades</th>
+                        <th scope="col">Horários</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Capoeira</td>
+                        <td>Segunda - 16:30 <br>Sexta - 16:00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Zumba</td>
+                        <td>Terça - 13:40 <br>Quinta - 14:00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Sanda</td>
+                        <td>Terça - 17:00 <br>Quinta - 18:00</td>
+                    </tr>
+                    <tr>
+                    <th scope="row">4</th>
+                        <td>Yoga</td>
+                        <td>Segunda - 14:00 <br>Quinta - 15:00</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Muay Tai</td>
+                        <td>Quarta - 19:00 <br>Sexta - 19:00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="agendar-aula">
+            <h3>Agendar aula</h3>
+            <input type="text" placeholder="Nome:">
+            <input type="text" placeholder="E-mail:">
+            <input type="text" placeholder="Telefone:">
+            <select name="modalodade" id="modalidade">
+                <option value="" disabled selected>Modalidade</option>
+                <option value="capoeira">Capoeira</option>
+                <option value="zumba">Zumba</option>
+                <option value="sanda">Sanda</option>
+                <option value="yoga">Yoga</option>
+                <option value="muaythai">Muay Thai</option>
+            </select>
+            <select name="horario" id="horario">
+                <option value="" disabled selected>Horário</option>
+            </select>
+            <button onclick="agendarAula()">Agendar</button>
+        </div>
     </div>
 
-    <div class="tabela-horarios">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Modalidade</th>
-                    <th scope="col">Horários</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Capoeira</td>
-                    <td>Segunda - 16:30 <br>Sexta - 16:00</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Zumba</td>
-                    <td>Terça - 13:40 <br>Quinta - 14:00</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Sanda</td>
-                    <td>Terça - 17:00 <br>Quinta - 18:00</td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Yoga</td>
-                    <td>Segunda - 14:00 <br>Quinta - 15:00</td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Muay Tai</td>
-                    <td>Quarta - 19:00 <br>Sexta - 19:00</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="agendar">
-        <input type="text" placeholder="Nome:">
-        <input type="text" placeholder="E-mail:">
-        <select name="modalodade" id="modalidade">
-            <option value="" disabled selected>Modalodade</option>
-            <option value="capoeira">Capoeira</option>
-            <option value="zumba">Zumba</option>
-            <option value="sanda">Sanda</option>
-            <option value="yoga">Yoga</option>
-            <option value="muaythai">Muay Thai</option>
-        </select>
-        <select name="horario" id="horario">
-            <option value="" disabled selected>Horários</option>
-        </select>
-        <button onclick="agendar()">Agendar</button>
+    <div class="avaliacao-fisica">
+        <h2>Avaliação Física</h2>
+        <p>Agende sua avaliação física gratuita e receba um plano personalizado para alcançar seus objetivos.</p>
+        <div class="agendar-avaliacao">
+            <h3>Agendar Avaliação</h3>
+            <input type="text" placeholder="Nome:">
+            <input type="email" placeholder="E-mail:">
+            <input type="telefone" placeholder="Telefone:">
+            <input type="checkbox" name="" id="">
+            <input type="checkbox" name="" id="">
+            <button onclick="agendarAvaliacao()">Agendar Avaliação</button>
+        </div>
     </div>
 
 

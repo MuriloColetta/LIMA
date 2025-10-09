@@ -20,69 +20,94 @@ nav a{
 
 nav{
     margin-bottom: 0px;
+    margin-right: 20px;
 }
 
 header img {
     width: 150px;
     height: auto;
+    margin-left: 20px;
 }
 
 .inicial {
-    background: url('tela-inicial.png') no-repeat center center/cover;
+    position: relative;
     height: 600px;
+    background: url('fundo.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
+    justify-content: flex-start;
     color: white;
+    padding-left: 80px;
 }
 
+.inicial::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
 
-
-.inicial-content {
+.inicial h1 {
     position: relative;
     z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    max-width: 1200px;
-}
-
-.inicial-texto h1 {
     font-size: 3rem;
-    line-height: 1.2;
     font-weight: bold;
-    margin: 0;
-    color: white;
-    text-align: left;
 }
 
-.inicial-img {
-    max-width: 300px;
+
+
+
+.container {
+    display: flex; /* Define o container como um flex container */
+    width: 100%; /* Ocupa a largura total */
+    margin-top: 10px;
+}
+
+.sobre-texto {
+    flex: 1; /* Ocupa o espaço que sobrar, ou seja, metade, neste caso */
+    padding: 20px; /* Adiciona algum espaço interno */
+}
+
+.sobre-img {
+    flex: 1; /* Ocupa a outra metade */
+}
+
+.imagem-fundo {
+    width: 100%; /* Garante que a imagem preencha a coluna */
     height: auto;
-    margin-left: 50px;
-    border-radius: 10px;
+    display: block;
 }
 
-/* Responsivo */
-@media (max-width: 900px) {
-    .inicial-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .inicial-texto h1 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .inicial-img {
-        margin-left: 0;
-        max-width: 200px;
-    }
+.bandeira {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    /* O SEGREDO: Usando clip-path para criar o ângulo */
+    /* Este define um polígono com 4 pontos, onde o canto superior direito
+       e o canto inferior direito são um pouco deslocados para dentro (90%) */
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+    /* OU você pode tentar um valor diferente para o ângulo, como 95%: */
+    /* clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%); */
+    width: fit-content; /* Para que o bloco não ocupe toda a largura */
+    width: 500px;
 }
+
+.bandeira h1 {
+    margin: 0; /* Remove margens padrão do h1 */
+    font-size: 2em;
+}
+
+/* Estilo para o texto restante */
+.coluna-esquerda p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
 
 
 .agendamento-aulas {
@@ -143,7 +168,8 @@ table {
 }
 
 
-.agendar {
+.agendar-aula {
+    color: white;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -154,9 +180,10 @@ table {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
-.agendar input,
-.agendar select,
-.agendar button {
+
+.agendar-aula input,
+.agendar-aula select,
+.agendar-aula button {
     padding: 12px;
     border-radius: 8px;
     border: none;
@@ -164,12 +191,12 @@ table {
     font-size: 1rem;
 }
 
-.agendar input, .agendar select {
+.agendar-aula input, .agendar-aula select {
     background-color: #242424;
     color: #fff;
 }
 
-.agendar button {
+.agendar-aula button {
     background-color: red;
     color: #fff;
     font-weight: bold;
@@ -177,7 +204,76 @@ table {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.agendar button:hover {
+.agendar-aula button:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+.agendar-avaliacao {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #2c2c2c;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.agendamento-aulas h2 {
+    color: red;
+    margin-top: 20px;
+}
+
+.agendar-avaliacao input,
+.agendar-avaliacao button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.agendar-avaliacao input {
+    background-color: #242424;
+    color: #fff;
+}
+
+.agendar-avaliacao {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.agendar-avaliacao h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+.agendar-avaliacao button {
+    background-color: red;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.agendar-avaliacao button:hover {
     background-color: darkred;
     transform: scale(1.05);
 }
